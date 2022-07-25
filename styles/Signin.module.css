@@ -1,0 +1,104 @@
+.mainContainer {
+  color: white;
+  overflow: hidden;
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: solid black 1px;
+  border-radius: 8px;
+  margin: 8px auto;
+}
+
+.loginBox {
+  max-height: 444px;
+  width: 274px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  background-color: black;
+  border: var(--orange) 0.5px solid;
+}
+
+.topBox {
+  height: 88%;
+  padding: 8px;
+}
+
+.btcText {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
+}
+
+.providerBtnsContainer {
+  display: flex;
+  width: 100%;
+  height: 12%;
+}
+
+.googleIcon {
+  font-size: 1.5rem;
+  margin-right: 4px;
+}
+
+.providerBtnsContainer .signInBtn {
+  background: black;
+  height: 100%;
+  font-size: 1.3rem;
+  padding: 10px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.providerBtnsContainer .signInBtn:hover {
+  background-color: rgb(119, 55, 5);
+}
+
+.signInBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contributeBtn {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.contributeBtn:hover {
+  background-color: rgb(119, 55, 5);
+}
+
+.signInBtn > * {
+  font-size: 2rem;
+}
+
+.loginWithLightningBtn {
+  margin: 0 auto;
+  height: auto;
+  background-color: #fada5d;
+  color: #212529;
+  width: 100%;
+  font-weight: bold;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.loginWithLightningBtn:hover {
+  filter: brightness(85%);
+}
+
+.loginWithLightningBtn:active {
+  background-color: white;
+}

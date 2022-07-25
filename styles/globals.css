@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
 html,
 body {
   padding: 0;
@@ -13,4 +15,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --main-bg: #1540fa;
+  --secondary: #30166b;
+  --third: #0ebeb2;
 }
