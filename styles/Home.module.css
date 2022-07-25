@@ -1,5 +1,11 @@
 .main {
   width: 100%;
+  height: calc(100vh - 40px);
+  background-color: aqua;
+  background-image: url('/images/crypto.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .marketsContainer {

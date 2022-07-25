@@ -24,15 +24,18 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.marketsContainer}>
-          {' '}
+        {/* <div className={styles.marketsContainer}>
           {markets &&
-            markets.map(market => (
-              <MarketCard setChosenMarket={setChosenMarket} market={market} />
+            markets.map((market, index) => (
+              <MarketCard
+                key={index}
+                setChosenMarket={setChosenMarket}
+                market={market}
+              />
             ))}
         </div>
 
-        {chosenMarket && <ChosenMarketDisplay chosenMarket={chosenMarket} />}
+        {chosenMarket && <ChosenMarketDisplay chosenMarket={chosenMarket} />} */}
       </main>
     </div>
   );

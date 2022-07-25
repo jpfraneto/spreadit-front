@@ -34,7 +34,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={styles.menu}>
-          <a href='https://docs.spreadit.pro' target='_blank'>
+          <a href='https://docs.spreadit.pro' target='_blank' rel='noreferrer'>
             API Docs
           </a>
           {session ? (
