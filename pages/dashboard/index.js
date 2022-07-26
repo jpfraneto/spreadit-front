@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSession } from 'next-auth/react';
 import data from '../../data/markets';
+import Link from 'next/link';
 import styles from '../../styles/Dashboard.module.css';
 
 const Dashboard = () => {
@@ -8,11 +9,8 @@ const Dashboard = () => {
   const [chosenMarkets, setChosenMarkets] = useState([]);
   const [chosenSpreadsValues, setChosenSpreadsValues] = useState([]);
   const handleCreateAlert = async () => {
-    console.log('IN HERE!');
-    const response = await fetch('http://localhost:3001/api/spreads');
-    console.log('the response is: ', response);
+    const response = await fetch(`${process.env.API_URL}/api/spreads`);
     const jsoned = await response.json();
-    console.log('the jsoned is:', jsoned);
   };
   const getParticularSpreads = async () => {
     const reqParams = {
@@ -23,7 +21,7 @@ const Dashboard = () => {
       }),
     };
     const response = await fetch(
-      'http://localhost:3001/api/spreads',
+      `${process.env.API_URL}/api/spreads`,
       reqParams
     );
     const data = await response.json();
@@ -45,6 +43,9 @@ const Dashboard = () => {
   return (
     <div className={styles.mainContainer}>
       <h1>{session.user.username}&apos;s dashboard</h1>
+      <Link href='/dashboard/alerts'>
+        <a>MY ALERTS!</a>
+      </Link>
       <h2>Choose some markets to get their spreads:</h2>
       {data && (
         <div className={styles.marketIdsContainer}>
