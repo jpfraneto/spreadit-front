@@ -1,0 +1,16 @@
+.savedAlertCard {
+  background-color: bisque;
+  width: fit-content;
+  padding: 8px;
+  border: solid black 1px;
+  border-radius: 8px;
+  margin: 3px 8px;
+}
+
+.savedAlertCard h2 {
+  margin: 0;
+}
+
+.savedAlertCard h4 {
+  margin: 0;
+}

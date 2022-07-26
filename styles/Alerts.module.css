@@ -1,0 +1,9 @@
+.mainContainer {
+  text-align: center;
+}
+
+.savedAlertsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,0 +1,16 @@
+.newAlertContainer {
+  background-color: beige;
+  width: 444px;
+  padding: 8px;
+  margin: 8px auto;
+  border: solid black 2px;
+  border-radius: 10px;
+}
+
+.newAlertContainer h2 {
+  margin: 0;
+}
+
+.spreadValueMessage {
+  font-size: 0.8rem;
+}

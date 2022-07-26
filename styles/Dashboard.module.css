@@ -1,0 +1,36 @@
+.mainContainer {
+  text-align: center;
+}
+.marketIdsContainer {
+  width: 88%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.marketIds {
+  border-radius: 20px;
+  padding: 8px;
+  margin: 4px;
+  background-color: wheat;
+  cursor: pointer;
+}
+
+.chosenMarketId {
+  background-color: rgb(170, 152, 120);
+}
+
+.spreadsValuesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.spreadsValues {
+  width: fit-content;
+  margin: 8px;
+  padding: 8px;
+  border: solid black 1px;
+  background-color: royalblue;
+  border-radius: 8px;
+}
