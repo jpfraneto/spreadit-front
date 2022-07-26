@@ -44,7 +44,7 @@ const Dashboard = () => {
     );
   return (
     <div className={styles.mainContainer}>
-      <h1>{session.user.username}'s dashboard</h1>
+      <h1>{session.user.username}&apos;s dashboard</h1>
       <h2>Choose some markets to get their spreads:</h2>
       {data && (
         <div className={styles.marketIdsContainer}>
@@ -69,7 +69,7 @@ const Dashboard = () => {
           <div className={styles.spreadsValuesContainer}>
             {chosenSpreadsValues.map((x, index) => {
               return (
-                <div className={styles.spreadsValues}>
+                <div key={index} className={styles.spreadsValues}>
                   <p>{x.id}</p>
                   <p>
                     Spread Value: {x.spread[0]} {x.spread[1]}
