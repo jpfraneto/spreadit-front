@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import data from '../../data/markets';
 import styles from './NewAlert.module.css';
 
-const NewAlert = ({ setActiveAlerts }) => {
+const NewSpreadAlert = ({ setAllSpreadAlerts }) => {
   const [newAlert, setNewAlert] = useState({});
   const [loading, setLoading] = useState(false);
   const [marketSpreadValue, setMarketSpreadValue] = useState(null);
@@ -43,7 +43,7 @@ const NewAlert = ({ setActiveAlerts }) => {
       }),
     };
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/u/alerts`,
+      `http://localhost:3001/api/spreads/alert`,
       reqParams
     );
     const data = await response.json();
@@ -112,6 +112,7 @@ const NewAlert = ({ setActiveAlerts }) => {
             </span>
           )}
           <br />
+          <input type='radio'></input>
           <button onClick={handleSubmitAlert}>Add Spread Alert</button>
         </div>
       )}
@@ -119,4 +120,4 @@ const NewAlert = ({ setActiveAlerts }) => {
   );
 };
 
-export default NewAlert;
+export default NewSpreadAlert;

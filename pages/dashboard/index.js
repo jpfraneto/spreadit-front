@@ -9,7 +9,9 @@ const Dashboard = () => {
   const [chosenMarkets, setChosenMarkets] = useState([]);
   const [chosenSpreadsValues, setChosenSpreadsValues] = useState([]);
   const handleCreateAlert = async () => {
-    const response = await fetch(`${process.env.API_URL}/api/spreads`);
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/spreads`
+    );
     const jsoned = await response.json();
   };
   const getParticularSpreads = async () => {
@@ -21,7 +23,7 @@ const Dashboard = () => {
       }),
     };
     const response = await fetch(
-      `${process.env.API_URL}/api/spreads`,
+      `http://localhost:3001/api/spreads`,
       reqParams
     );
     const data = await response.json();

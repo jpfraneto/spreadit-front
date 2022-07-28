@@ -1,0 +1,26 @@
+.alertCardContainer {
+  width: fit-content;
+  background-color: bisque;
+  border: solid black 2px;
+  border-radius: 8px;
+  padding: 4px 6px;
+  text-align: center;
+  margin: 4px;
+  cursor: pointer;
+}
+
+.alertCardContainer:hover {
+  filter: brightness(77%);
+}
+
+.alertCardContainer > * {
+  margin: 0;
+}
+
+.alertCardContainer p {
+  margin: 0;
+}
+
+.triggering {
+  background-color: green;
+}

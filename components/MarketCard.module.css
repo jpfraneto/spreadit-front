@@ -1,6 +1,6 @@
 .marketCard {
   width: fit-content;
-  height: 40px;
+  text-align: center;
   padding: 4px;
   background-color: whitesmoke;
   border: solid black 2px;

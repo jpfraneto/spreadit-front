@@ -7,10 +7,3 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.marketsContainer {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}

@@ -5,13 +5,12 @@ import styles from '../styles/Home.module.css';
 import Fetcher from '../components/fetcher';
 import MarketCard from '../components/MarketCard';
 import ChosenMarketDisplay from '../components/ChosenMarketDisplay';
-import data from '../data/markets';
 import { useSession } from 'next-auth/react';
+import MarketsLandingInformation from '../components/MarketsLandingInformation';
 
 export default function Home() {
-  const [markets, setMarkets] = useState(data.marketIds);
-  const [chosenMarket, setChosenMarket] = useState(null);
   const { data: session } = useSession();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -24,17 +23,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        {/* <div className={styles.marketsContainer}>
-          {markets &&
-            markets.map((market, index) => (
-              <MarketCard
-                key={index}
-                setChosenMarket={setChosenMarket}
-                market={market}
-              />
-            ))}
-        </div>
-
+        <MarketsLandingInformation />
+        {/* 
         {chosenMarket && <ChosenMarketDisplay chosenMarket={chosenMarket} />} */}
       </main>
     </div>
