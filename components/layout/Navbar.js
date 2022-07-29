@@ -10,7 +10,7 @@ const Navbar = () => {
   const { data: session } = useSession();
   useEffect(() => {
     if (session) return setDisplayer(false);
-  }, [session?.user]);
+  }, [session]);
 
   const handleUsernameUpdate = async () => {
     if (!username) return alert('Agrega un nombre de usuario!');

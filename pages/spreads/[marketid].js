@@ -25,10 +25,10 @@ const SpreadByMarketId = ({ aloja }) => {
       <p>
         To display the history of the spreads: For this I need to be able to
         store them in the database and fetch that information in a way that is
-        conducent to being able to display it. How to do this? I don't really
-        know. This has a lot to do with dealing with databases, and how to store
-        information in them. I have never done that properly, so there is not an
-        understanding in me on how to do it.
+        conducent to being able to display it. How to do this? I don&apos;t
+        really know. This has a lot to do with dealing with databases, and how
+        to store information in them. I have never done that properly, so there
+        is not an understanding in me on how to do it.
       </p>
       <p>To set up an alarm for this particular market</p>
       <button onClick={() => alert('alarm for this market!')}>Alarm</button>

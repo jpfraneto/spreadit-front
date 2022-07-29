@@ -25,8 +25,8 @@ const AlertById = ({ alert }) => {
           <div>
             Triggered {alert.triggered.length} times
             <div style={{ height: '33vh', overflowY: 'scroll' }}>
-              {alert.triggered.map(x => (
-                <p style={{ margin: '0' }}>
+              {alert.triggered.map((x, index) => (
+                <p key={index} style={{ margin: '0' }}>
                   {x.timestamp} : {x.spread}
                 </p>
               ))}
