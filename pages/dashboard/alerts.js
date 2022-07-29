@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import data from '../../data/markets';
 import { connectToDatabase } from '../../lib/mongodb';
-import { getSession } from 'next-auth/react';
-import NewAlert from '../../components/Alerts/NewAlert';
+import { getSession, useSession } from 'next-auth/react';
+import NewSpreadAlert from '../../components/Alerts/NewSpreadAlert';
 import SavedAlert from '../../components/Alerts/SavedAlert';
 import styles from '../../styles/Alerts.module.css';
 
@@ -10,6 +10,7 @@ export async function getServerSideProps(context) {
   let { db } = await connectToDatabase();
   let userAlerts = [];
   const session = await getSession(context);
+  if (!session) return { props: {} };
   const user = await db
     .collection('users')
     .findOne({ username: session.user.username });
@@ -20,7 +21,9 @@ export async function getServerSideProps(context) {
 }
 
 const Alerts = ({ userAlerts }) => {
+  const { data: session } = useSession();
   const [activeAlerts, setActiveAlerts] = useState(userAlerts);
+  if (!session) return <p>You need to be logged in to access this page</p>;
   return (
     <div className={styles.mainContainer}>
       {activeAlerts && (
@@ -33,7 +36,7 @@ const Alerts = ({ userAlerts }) => {
           </div>
         </>
       )}
-      <NewAlert setActiveAlerts={setActiveAlerts} />
+      <NewSpreadAlert setActiveAlerts={setActiveAlerts} />
     </div>
   );
 };

@@ -5,9 +5,12 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 
 const Navbar = () => {
   const [username, setUsername] = useState('');
+  const [displayer, setDisplayer] = useState(true);
   const [updatedUsername, setUpdatedUsername] = useState(false);
   const { data: session } = useSession();
-  useEffect(() => {}, [session?.user]);
+  useEffect(() => {
+    if (session) return setDisplayer(false);
+  }, [session?.user]);
 
   const handleUsernameUpdate = async () => {
     if (!username) return alert('Agrega un nombre de usuario!');
@@ -22,6 +25,7 @@ const Navbar = () => {
     const data = await response.json();
     if (data.available) {
       session.user.username = username;
+      setDisplayer(false);
     }
   };
 
@@ -57,7 +61,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      {session && !session.user.username && (
+      {displayer && session && !session.user.username && (
         <div className={styles.usernameNav}>
           Get a username!{' '}
           <input

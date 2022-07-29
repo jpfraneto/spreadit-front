@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 export async function getServerSideProps(context) {
   const apiResponse = await fetch(
-    `${process.env.API_URL}/api/spreads/${context.query.marketid}/history`
+    `http://api.spreadit.pro/api/spreads/${context.query.marketid}/history`
   );
   const responseData = await apiResponse.json();
   console.log('the response data is: ', responseData);
