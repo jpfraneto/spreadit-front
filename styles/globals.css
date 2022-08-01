@@ -22,3 +22,15 @@ a {
   --secondary: #30166b;
   --third: #0ebeb2;
 }
+
+.main-container {
+  height: 100vh;
+  background-color: white;
+  display: flex;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}

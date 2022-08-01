@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import data from '../../data/markets';
 import { connectToDatabase } from '../../lib/mongodb';
 import { getSession, useSession } from 'next-auth/react';
 import NewSpreadAlert from '../../components/Alerts/NewSpreadAlert';
@@ -28,7 +27,7 @@ const Alerts = ({ userAlerts }) => {
     <div className={styles.mainContainer}>
       {activeAlerts && (
         <>
-          <h1>Spread Alerts</h1>
+          <h1 className={styles.title}>Spread Alerts</h1>
           <div className={styles.savedAlertsContainer}>
             {activeAlerts.map((savedAlert, index) => (
               <SavedAlert key={index} savedAlert={savedAlert} />

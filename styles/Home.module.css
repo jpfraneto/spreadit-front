@@ -1,4 +1,5 @@
-.main {
+.mainContainer {
+  padding-top: 88px;
   width: 100%;
   height: calc(100vh - 40px);
   background-color: black;
@@ -6,4 +7,62 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
+}
+
+.mainContainer h2 {
+  margin: 0;
+  color: white;
+}
+
+.marketIdsContainer {
+  width: 88%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.marketIds {
+  border-radius: 20px;
+  padding: 8px;
+  margin: 4px;
+  background-color: wheat;
+  cursor: pointer;
+}
+
+.chosenMarketId {
+  background-color: rgb(170, 152, 120);
+}
+
+.spreadsValuesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.spreadsValues {
+  width: fit-content;
+  margin: 8px;
+  padding: 8px;
+  border: solid black 1px;
+  background-color: wheat;
+  border-radius: 8px;
+}
+
+.spreadsValues > * {
+  margin: 0;
+}
+
+.fetchBtn {
+  color: white;
+  background-color: black;
+  padding: 4px 8px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.fetchBtn:hover {
+  background-color: white;
+  color: black;
 }

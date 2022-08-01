@@ -43,14 +43,21 @@ const Navbar = () => {
           </a>
           {session ? (
             <>
-              <Link href='/dashboard'>
+              <Link href='/u/dashboard'>
                 <a>
                   {session.user.username
                     ? `${session.user.username}`
                     : `${session.user.email}`}
                 </a>
               </Link>
-              <a onClick={() => signOut()} className={styles.logoutBtn}>
+              <a
+                onClick={() =>
+                  signOut('', {
+                    callbackUrl: `${window.location.origin}`,
+                  })
+                }
+                className={styles.logoutBtn}
+              >
                 Cerrar Sesión
               </a>
             </>

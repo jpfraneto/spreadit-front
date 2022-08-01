@@ -30,7 +30,11 @@ export default function SignIn({ providers }) {
               <button
                 key={provider.name}
                 className={styles.signInBtn}
-                onClick={() => signIn(provider.id)}
+                onClick={() =>
+                  signIn(provider.id, {
+                    callbackUrl: `${window.location.origin}/u/dashboard`,
+                  })
+                }
               >
                 {getProviderIcon(provider.name)}
               </button>

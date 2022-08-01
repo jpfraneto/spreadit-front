@@ -6,4 +6,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
+}
+
+.title {
+  width: 100%;
+  border-bottom: 1px solid black;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
 }

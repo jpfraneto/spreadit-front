@@ -36,11 +36,5 @@ export default NextAuth({
       session.user.username = user.username;
       return session;
     },
-    redirect: async (url, _baseUrl) => {
-      if (url === '/user') {
-        return Promise.resolve('/');
-      }
-      return Promise.resolve('/');
-    },
   },
 });
